@@ -1,3 +1,5 @@
+
+
 public class Soup {
     //these are instance variables 
     private String letters;
@@ -29,13 +31,15 @@ public class Soup {
 
     //adds a word to the pool of letters known as "letters"
     public void add(String word){
-
+        letters += word;
     }
 
 
     //Use Math.random() to get a random character from the letters string and return it.
     public char randomLetter(){
-        return 'a';
+        int randomIndex= (int) (Math.random()*letters.length()-1);
+        char randomLetter= letters.charAt(randomIndex);
+        return randomLetter;
     }
 
 
@@ -48,6 +52,10 @@ public class Soup {
 
     //should remove the first available vowel from letters. If there are no vowels this method has no effect.
     public void removeFirstVowel(){
+        String myStr = "This is W3Schools";
+String regex = "is";
+string letters="here are some words in my letters";
+System.out.println(myStr.replaceFirst([aeiou], ""));
         
     }
 
