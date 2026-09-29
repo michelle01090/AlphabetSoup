@@ -46,7 +46,10 @@ public class Soup {
     //returns the letters currently stored with the company name placed directly in the center of all
     //the letters
     public String companyCentered(){
-        return "";
+        int lettersLengthIndex= (int)(letters.length()/2);
+        String firstHalf= letters.substring (0, lettersLengthIndex);
+        String secondHalf= letters.substring(lettersLengthIndex);
+        return (firstHalf+company+secondHalf);
     }
 
 
@@ -54,13 +57,14 @@ public class Soup {
     public void removeFirstVowel(){
         String myStr = "This is W3Schools";
 String regex = "is";
-string letters="here are some words in my letters";
-System.out.println(myStr.replaceFirst([aeiou], ""));
+String letters="here are some words in my letters";
+
         
     }
 
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
     public void removeSome(int num){
+    letters=letters.substring (0, num)+ letters.substring(num+1);
 
     }
 
