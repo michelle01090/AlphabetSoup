@@ -38,7 +38,7 @@ public class Soup {
     //Use Math.random() to get a random character from the letters string and return it.
     public char randomLetter(){
         int randomIndex= (int) (Math.random()*letters.length()-1);
-        char randomLetter= letters.charAt(randomIndex);
+        char randomLetter= (letters.charAt(randomIndex));
         return randomLetter;
     }
 
@@ -47,8 +47,8 @@ public class Soup {
     //the letters
     public String companyCentered(){
         int lettersLengthIndex= (int)(letters.length()/2);
-        String firstHalf= letters.substring (0, lettersLengthIndex);
-        String secondHalf= letters.substring(lettersLengthIndex);
+        String firstHalf= letters.substring (0, lettersLengthIndex-1);
+        String secondHalf= letters.substring(lettersLengthIndex-1);
         return (firstHalf+company+secondHalf);
     }
 
@@ -63,13 +63,16 @@ String letters="here are some words in my letters";
     }
 
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
-    public void removeSome(int num){
-    letters=letters.substring (0, num)+ letters.substring(num+1);
+    public void removeSome(int num)
+       
+    //pick a random index such that you're smaller than "num" from the end of letters for example if letters has 10 characters and we want to remove 5 the largest index we want to pick would be 5
+    //use substring to create two parts to add the before part and the after part and the middle gets "cut out"
 
     }
 
     //should remove the word "word" from the string letters. If the word is not found in letters then it does nothing.
     public void removeWord(String word){
+
         
     }
 }
